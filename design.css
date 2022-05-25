@@ -1,0 +1,11 @@
+body{
+    background-color: beige;
+    position: relative;
+}
+
+.notice{
+    position: relative;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}   
