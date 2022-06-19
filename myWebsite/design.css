@@ -1,0 +1,126 @@
+:root {
+    --clr-primary: #101216;
+    --clr-secondary: #DDDD;
+    --clr--accent-1: #112B3C;
+    --clr-accent-2: #3e5d7c;
+    --ff-title: 'Kdam Thmor Pro', sans-serif;
+    --ff-subtext: 'Roboto Mono', monospace;
+    --ff-img-text: 'Mukta', sans-serif;
+    ;
+}
+
+html {
+    box-sizing: border-box;
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    font-family: var(--ff-subtext);
+    scroll-behavior: auto smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/*-----------------NAVIGATION----------*/
+.nav {
+    position: fixed;
+    height: 100vh;
+    background-color: var(--clr--accent-1);
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.myLogo {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+}
+
+.nav-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.nav-item{
+    list-style: none;
+    color: white;
+    border-radius: 20%;
+    width: fit-content;
+    border: solid 1px #112B3C;
+    background-color: #112B3C;
+}
+
+.nav-item a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.icon{
+    padding: 1em;
+    z-index: 100;
+}
+
+.text{
+    display: none;
+    position: absolute;
+}
+
+.nav-item:hover .text{
+    display: block;
+    left: 2.5em;
+    background-color: var(--clr--accent-1);
+    animation: movetoRight 0.6s linear;
+    border-radius: 50%;
+    padding: 1em;
+}
+@keyframes movetoRight {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1em);
+    }
+    
+}
+
+.nav-item:active .text{
+    transform: translateX(1em);
+}
+
+
+
+/*-------BODY-------------*/
+.main_body {
+    position: relative;
+    width: auto;
+    margin: 0 0 0 90px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.main_body section {
+    height: 100vh;
+    scroll-snap-align: start;
+
+
+}
+
+
+
